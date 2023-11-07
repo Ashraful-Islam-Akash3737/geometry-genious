@@ -14,6 +14,10 @@ function setElementInnerText(elementId, area){
 function calculateTriangleArea(){
     const base = getInputValue('triangle-base');
     const height = getInputValue('triangle-height');
+    if(isNaN(base) || isNaN(height)){
+        alert("please, provide me a number");
+        return;
+    }
     const area = 0.5 * base * height;
     setElementInnerText('triangle-area', area);
 }
@@ -22,6 +26,10 @@ function calculateTriangleArea(){
 function calculateRectangleArea(){
     const width = getInputValue('rectangle-width');
     const length = getInputValue('rectangle-length');
+    if(isNaN(width) || isNaN(length)){
+        alert("please, provide me a number");
+        return;
+    }
     const area = width * length;
     setElementInnerText('rectangle-area',area);
 }
@@ -30,6 +38,10 @@ function calculateRectangleArea(){
 function calculateParallelogramArea(){
     const base = getInputValue("parallelogram-base");
     const height = getInputValue("parallelogram-height");
+    if(isNaN(base) || isNaN(height)){
+        alert("please, provide me a number");
+        return;
+    }
     const area = base * height;
     setElementInnerText("parallelogram-area", area);
     
@@ -39,6 +51,10 @@ function calculateParallelogramArea(){
 function calculateEllipseArea(){
     const majorRadious = getInputValue('ellipse-major-radious');
     const minorRadious = getInputValue('ellipse-minor-radious');
+    if(isNaN(majorRadious) || isNaN(minorRadious)){
+        alert("please, provide me a number");
+        return;
+    }
     const area = 3.14 * majorRadious * minorRadious;
     const areaToDecimal = area.toFixed(2);
     setElementInnerText("ellipse-area", areaToDecimal);
@@ -48,15 +64,23 @@ function calculateEllipseArea(){
 function calculateRhombusArea(){
     const majorHand = getInputValue('rhombus-major-hand');
     const minorHand = getInputValue('rhombus-minor-hand');
+    if(isNaN(majorHand) || isNaN(minorHand)){
+        alert("please, provide me a number");
+        return;
+    }
     const area = 0.5 * majorHand * minorHand;
     const areaToDecimal = area.toFixed(2);
     setElementInnerText("rhombus-area", areaToDecimal);
 }
 
-// Rhombus
-function calculateRhombusArea(){
+// Pentagon
+function calculatePentagonArea(){
     const majorHand = getInputValue('pentagon-major-hand');
     const minorHand = getInputValue('pentagon-minor-hand');
+    if(isNaN(majorHand) || isNaN(minorHand)){
+        alert("please, provide me a number");
+        return;
+    }
     const area = 0.5 * majorHand * minorHand;
     const areaToDecimal = area.toFixed(2);
     setElementInnerText("pentagon-area", areaToDecimal);
