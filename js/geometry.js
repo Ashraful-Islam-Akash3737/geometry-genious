@@ -72,3 +72,12 @@ function calculateRhombusArea(){
     const areaToDecimal = area.toFixed(2);
     setElementInnerText("rhombus-area", areaToDecimal);
 }
+
+
+function calculatePentagonArea(){
+    const majorHand = getInputValue('pentagon-major-hand');
+    const minorHand = getInputValue('pentagon-minor-hand');
+    const area = 0.5 * majorHand * minorHand;
+    const areaToDecimal = area.toFixed(2);
+    setElementInnerText("pentagon-area", areaToDecimal);
+}
