@@ -30,22 +30,12 @@ function calculateTriangleArea(){
     // console.log(areaSpan.innerText);
 }
 function calculateRectangleArea(){
-    const widthField = document.getElementById('rectangle-width');
-    const widthValueText = widthField.value;
-    const width = parseFloat(widthValueText);
-    // console.log(width);
+    const width = getInputValue('rectangle-width');
 
-    const lengthField = document.getElementById('rectangle-length');
-    const lengthValueText = lengthField.value;
-    const length = parseFloat(lengthValueText);
-    // console.log(length);
+    const length = getInputValue('rectangle-length');
 
     const area = width * length;
-    // console.log(area);
-
-    const areaSpan = document.getElementById('rectangle-area');
-    areaSpan.innerText = area;
-    // console.log(areaSpan.innerText);
+    setElementInnerText('rectangle-area',area);
 }
 
 function calculateParallelogramArea(){
