@@ -1,3 +1,16 @@
+function getInputValue(fieldId){
+    const inputField = document.getElementById(fieldId);
+    const inputValueText = inputField.value;
+    const input = parseFloat(inputValueText);
+    return input;
+
+}
+function setElementInnerText(elementId, area){
+    const element = document.getElementById(elementId);
+    element.innerText = area;
+}
+
+
 function calculateTriangleArea(){
     const baseField = document.getElementById('triangle-base');
     const baseValueText = baseField.value;
@@ -33,4 +46,15 @@ function calculateRectangleArea(){
     const areaSpan = document.getElementById('rectangle-area');
     areaSpan.innerText = area;
     // console.log(areaSpan.innerText);
+}
+
+function calculateParallelogramArea(){
+    const base = getInputValue("parallelogram-base");
+    console.log(typeof base);
+    const height = getInputValue("parallelogram-height");
+    console.log(typeof height);
+    const area = base * height;
+    console.log(typeof area);
+    setElementInnerText("parallelogram-area", area);
+    
 }
