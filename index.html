@@ -94,12 +94,30 @@
                         <h2 class="card-title">Rhombus</h2>
                         <p class="text-xl">Area (A) = 0.5 * d<sub>1</sub> * d<sub>2</sub></p>
                         <p>
-                            <input id="rhombus-major-hand" type="text" placeholder="large" class="border w-24 px-2 text-xl bg-gray-200" name="" >
+                            <input id="rhombus-major-hand" type="text" placeholder="d1" class="border w-24 px-2 text-xl bg-gray-200" name="" >
                             <span class="ml-2">cm</span>
-                            <input id="rhombus-minor-hand" type="text" placeholder="short" class="border ml-4 w-24 px-2 text-xl bg-gray-200" name="" id="">
+                            <input id="rhombus-minor-hand" type="text" placeholder="d2" class="border ml-4 w-24 px-2 text-xl bg-gray-200" name="" id="">
                             <span class="ml-2">cm</span>
                         </p>
                         <p class="text-2xl">Area: <span class="font-bold" id="rhombus-area">0</span> cm<sup>2</sup></p>
+                        <div class="card-actions">
+                            <button onclick="calculateRhombusArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- sixth card Pentagon -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="/images/pentagon.png" alt="pentagon" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Pentagon</h2>
+                        <p class="text-xl">Area (A) = 0.5 * p * b</p>
+                        <p>
+                            <input id="pentagon-major-hand" type="text" placeholder="p" class="border w-24 px-2 text-xl bg-gray-200" name="" >
+                            <span class="ml-2">cm</span>
+                            <input id="pentagon-minor-hand" type="text" placeholder="b" class="border ml-4 w-24 px-2 text-xl bg-gray-200" name="" id="">
+                            <span class="ml-2">cm</span>
+                        </p>
+                        <p class="text-2xl">Area: <span class="font-bold" id="pentagon-area">0</span> cm<sup>2</sup></p>
                         <div class="card-actions">
                             <button onclick="calculateRhombusArea()" class="btn btn-primary w-full">Calculate</button>
                         </div>
