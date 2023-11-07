@@ -50,11 +50,16 @@ function calculateRectangleArea(){
 
 function calculateParallelogramArea(){
     const base = getInputValue("parallelogram-base");
-    console.log(typeof base);
     const height = getInputValue("parallelogram-height");
-    console.log(typeof height);
     const area = base * height;
-    console.log(typeof area);
     setElementInnerText("parallelogram-area", area);
     
+}
+
+function calculateEllipseArea(){
+    const majorRadious = getInputValue('ellipse-major-radious');
+    const minorRadious = getInputValue('ellipse-minor-radious');
+    const area = 3.14 * majorRadious * minorRadious;
+    const areaToDecimal = area.toFixed(2);
+    setElementInnerText("ellipse-area", areaToDecimal);
 }
