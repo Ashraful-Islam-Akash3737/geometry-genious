@@ -9,6 +9,17 @@ function setElementInnerText(elementId, area){
     const element = document.getElementById(elementId);
     element.innerText = area;
 }
+function addToCalculationEntry(documentId, areaType , area){
+    const calculationEntry = document.getElementById(documentId);
+    const count = calculationEntry.childElementCount;
+    const p = document.createElement('p');
+    p.classList.add('style');
+    console.log(p);
+    p.innerHTML = `
+    ${count + 1}. ${areaType} ${area} cm<sup>2</sup>
+    `;
+    calculationEntry.appendChild(p);
+}
 
 // Triangle
 function calculateTriangleArea(){
@@ -19,7 +30,10 @@ function calculateTriangleArea(){
         return;
     }
     const area = 0.5 * base * height;
-    setElementInnerText('triangle-area', area);
+    const areaToDecimal = area.toFixed(2);
+    setElementInnerText('triangle-area', areaToDecimal);
+
+    addToCalculationEntry("calculation-entry", "Triangle" , areaToDecimal);
 }
 
 // Rectangle
@@ -32,6 +46,7 @@ function calculateRectangleArea(){
     }
     const area = width * length;
     setElementInnerText('rectangle-area',area);
+    addToCalculationEntry("calculation-entry", "Rectangle" , area);
 }
 
 // Parallelogram
@@ -44,7 +59,7 @@ function calculateParallelogramArea(){
     }
     const area = base * height;
     setElementInnerText("parallelogram-area", area);
-    
+    addToCalculationEntry("calculation-entry", "Parallelogram" , area);
 }
 
 // Ellipse
@@ -58,6 +73,7 @@ function calculateEllipseArea(){
     const area = 3.14 * majorRadious * minorRadious;
     const areaToDecimal = area.toFixed(2);
     setElementInnerText("ellipse-area", areaToDecimal);
+    addToCalculationEntry("calculation-entry", "Ellipse" , areaToDecimal);
 }
 
 // Rhombus
@@ -71,6 +87,7 @@ function calculateRhombusArea(){
     const area = 0.5 * majorHand * minorHand;
     const areaToDecimal = area.toFixed(2);
     setElementInnerText("rhombus-area", areaToDecimal);
+    addToCalculationEntry("calculation-entry", "Rhombus" , areaToDecimal);
 }
 
 // Pentagon
@@ -84,4 +101,5 @@ function calculatePentagonArea(){
     const area = 0.5 * majorHand * minorHand;
     const areaToDecimal = area.toFixed(2);
     setElementInnerText("pentagon-area", areaToDecimal);
+    addToCalculationEntry("calculation-entry", "Pentagon" , areaToDecimal);
 }
