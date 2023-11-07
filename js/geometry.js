@@ -63,3 +63,12 @@ function calculateEllipseArea(){
     const areaToDecimal = area.toFixed(2);
     setElementInnerText("ellipse-area", areaToDecimal);
 }
+
+
+function calculateRhombusArea(){
+    const majorHand = getInputValue('rhombus-major-hand');
+    const minorHand = getInputValue('rhombus-minor-hand');
+    const area = 0.5 * majorHand * minorHand;
+    const areaToDecimal = area.toFixed(2);
+    setElementInnerText("rhombus-area", areaToDecimal);
+}
